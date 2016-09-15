@@ -10,7 +10,7 @@ class DocsController < ApplicationController
   end
 
   def new
-    @doc = Doc.new
+    @doc = current_user.docs.build
   end
 
   def create
